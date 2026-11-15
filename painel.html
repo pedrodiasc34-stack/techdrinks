@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin - Pedidos</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Painel Administrativo - Pedidos</h1>
+        <p id="boasVindasAdmin"></p>
+      </div>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </header>
+
+    <div class="acoes-topo">
+      <button onclick="carregarPedidosAdmin()">Atualizar Lista</button>
+      <button class="btn-secundario" onclick="limparPedidos()">Limpar Histórico</button>
+    </div>
+
+    <div id="listaPedidos"></div>
+  </main>
+
+  <script src="painel.js"></script>
+</body>
+</html>

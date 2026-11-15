@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso ao Sistema - Adega</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Adega — Acesso ao Sistema</h1>
+        <p>Selecione seu perfil abaixo para continuar</p>
+      </div>
+    </header>
+
+    <div class="login-wrapper">
+      <!-- Formulário de Login do Cliente -->
+      <form id="formCliente">
+        <h2>Área do Cliente</h2>
+
+        <label for="emailCliente">E-mail</label>
+        <input type="email" id="emailCliente" placeholder="seuemail@exemplo.com" required>
+
+        <label for="senhaCliente">Senha</label>
+        <div class="campo-senha">
+          <input type="password" id="senhaCliente" placeholder="Mínimo 6 caracteres" required>
+          <button type="button" class="mostrar-senha" data-input="senhaCliente" title="Mostrar/ocultar senha">👁</button>
+        </div>
+
+        <button type="submit">Entrar como Cliente</button>
+        <div id="mensagemCliente" class="mensagem"></div>
+      </form>
+
+      <!-- Formulário de Login do Administrador -->
+      <form id="formAdmin">
+        <h2>Área Administrativa</h2>
+
+        <label for="usuarioAdmin">Usuário</label>
+        <input type="text" id="usuarioAdmin" placeholder="Ex: admin" required>
+
+        <label for="senhaAdmin">Senha</label>
+        <div class="campo-senha">
+          <input type="password" id="senhaAdmin" placeholder="Mínimo 6 caracteres" required>
+          <button type="button" class="mostrar-senha" data-input="senhaAdmin" title="Mostrar/ocultar senha">👁</button>
+        </div>
+
+        <label for="codigoAdmin">Código de Acesso</label>
+        <div class="campo-senha">
+          <input type="password" id="codigoAdmin" placeholder="Mínimo 4 dígitos" required>
+          <button type="button" class="mostrar-senha" data-input="codigoAdmin" title="Mostrar/ocultar código">👁</button>
+        </div>
+
+        <button type="submit">Acessar Painel Admin</button>
+        <div id="mensagemAdmin" class="mensagem"></div>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>

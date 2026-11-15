@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Adega</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Catálogo de Bebidas</h1>
+        <p id="boasVindasCliente"></p>
+      </div>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </header>
+
+    <section class="produtos">
+      <div class="card">
+        <h3>Combo Whisky + Energético</h3>
+        <p>R$ 149,90</p>
+        <button onclick="adicionarAoCarrinho('Combo Whisky + Energético', 149.90)">Adicionar</button>
+      </div>
+
+      <div class="card">
+        <h3>Pack Cerveja Long Neck (6 un.)</h3>
+        <p>R$ 38,00</p>
+        <button onclick="adicionarAoCarrinho('Pack Cerveja Long Neck (6 un.)', 38.00)">Adicionar</button>
+      </div>
+
+      <div class="card">
+        <h3>Gin Tropical Pronto (750ml)</h3>
+        <p>R$ 65,00</p>
+        <button onclick="adicionarAoCarrinho('Gin Tropical Pronto (750ml)', 65.00)">Adicionar</button>
+      </div>
+
+      <div class="card">
+        <h3>Refrigerante 2L</h3>
+        <p>R$ 10,00</p>
+        <button onclick="adicionarAoCarrinho('Refrigerante 2L', 10.00)">Adicionar</button>
+      </div>
+    </section>
+
+    <section class="carrinho">
+      <h2>Seu Pedido</h2>
+      <ul id="listaCarrinho"></ul>
+      <p><strong>Total: R$ <span id="valorTotal">0.00</span></strong></p>
+      <button class="btn-finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+    </section>
+  </main>
+
+  <script src="catalogo.js?v=3"></script>
+</body>
+</html>

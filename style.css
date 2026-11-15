@@ -1,0 +1,255 @@
+/* ===== RESET E VARIÁVEIS DO TEMA ADEGA ===== */
+:root {
+  --bg-principal: #0d0d10;
+  --bg-card: #18181f;
+  --bg-card-hover: #202029;
+  --bg-input: #111116;
+  --borda: #2c2c38;
+  --vinho: #7a0c23;
+  --vinho-hover: #9e112f;
+  --dourado: #e2b04a;
+  --texto-principal: #f4f4f6;
+  --texto-secundario: #a1a1aa;
+  --verde: #16a34a;
+  --verde-hover: #15803d;
+  --vermelho: #dc2626;
+  --vermelho-hover: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  padding: 24px;
+  line-height: 1.5;
+}
+
+/* ===== ESTILOS GERAIS DE CONTAINER E CABEÇALHO ===== */
+.container, main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: linear-gradient(135deg, var(--vinho) 0%, #450613 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* ===== BOTÕES ===== */
+button {
+  background-color: var(--vinho);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--vinho-hover);
+  transform: translateY(-1px);
+}
+
+.btn-sair {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-sair:hover {
+  background-color: var(--vermelho);
+  border-color: var(--vermelho);
+}
+
+.btn-concluir, .btn-finalizar {
+  background-color: var(--verde);
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.btn-concluir:hover, .btn-finalizar:hover {
+  background-color: var(--verde-hover);
+}
+
+.btn-secundario {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+  color: var(--texto-principal);
+}
+
+.btn-secundario:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--texto-secundario);
+}
+
+/* ===== TELA DE LOGIN (INDEX.HTML) ===== */
+.login-wrapper, .auth-container, .container-login {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+form, .login-box, .card-login {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 28px;
+  flex: 1 1 360px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+form h2, .login-box h2 {
+  color: #ffffff;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--vinho);
+  font-size: 1.3rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--vinho-hover);
+}
+
+.campo-senha {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mostrar-senha {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  padding: 6px;
+  font-size: 1rem;
+}
+
+.mostrar-senha:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: none;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  margin-top: 22px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.mensagem {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mensagem.erro {
+  background-color: rgba(220, 38, 38, 0.15);
+  border: 1px solid var(--vermelho);
+  color: #fca5a5;
+}
+
+.mensagem.sucesso {
+  background-color: rgba(22, 163, 74, 0.15);
+  border: 1px solid var(--verde);
+  color: #86efac;
+}
+
+/* ===== CATÁLOGO E CARRINHO (CATALOGO.HTML) ===== */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--vinho-hover);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dourado);
+  margin-bottom: 14px;
+}
+
+/* Aba de Pedidos (Carrinho) */
+.carrinho {
+  background-
